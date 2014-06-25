@@ -15,12 +15,12 @@ npm install error-inject
 ```js
 var inject = require('error-inject');
 
+var rs = fs.createReadStream('index.js');
+inject(rs, error);
+
 function error(err) {
   console.error(err);
 }
-
-var rs = fs.createReadStream('index.js');
-inject(rs, err);
 ```
 
 ## License
